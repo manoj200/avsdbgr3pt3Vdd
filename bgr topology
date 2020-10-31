@@ -1,0 +1,40 @@
+Vref @ VDD=3.3V & temp=27C over 100ns
+* Include SkyWater sky130 device models
+.lib "/home/manoj/sky_open_pdk/sky130_fd_pr/models/sky130.lib.spice" tt
+*change the above path as per your hierarchy in system 
+
+************BGR circuit topology***********************
+***** the circuit is refrenced from the work of Antonio Ribeiro et al., " A Bandgap Voltage Reference With Only MOS Transistors" 
+** Antonio and his team used Xfab 0.18-µm process for the said work
+** Refere their work for the details. 
+
+** The present work is implementing the same topology at SKY130 process
+
+**current mirror
+XM1 n1 n1 vdd vdd sky130_fd_pr__pfet_g5v0d10v5 
+XM2 n4 n1 vdd vdd  sky130_fd_pr__pfet_g5v0d10v5 
+XM3 vref n1 vdd vdd  sky130_fd_pr__pfet_g5v0d10v5 
+
+XM4 va n4 n1 n1  sky130_fd_pr__nfet_g5v0d10v5 
+XM5 vb n4 n4 n4  sky130_fd_pr__nfet_g5v0d10v5 
+
+XR1 va n9 va sky130_fd_pr__res_generic_nd l=.10k
+**above is genral resistor. to use poly resistor you can use --- XR1 va n9 va sky130_fd_pr__res_high_po_0p35 l=..10k
+XR2 vref n10 vref sky130_fd_pr__res_generic_nd l=10k   
+** same as XR1 you can have poly resistor for XR2
+
+XM6 n9 0 0 0  sky130_fd_pr__pfet_g5v0d10v5 ;W=420n L=150n M=1
+XM7 vb 0 0 0 sky130_fd_pr__pfet_g5v0d10v5 ;W=.42u L=.15u M=1
+XM8 n10 0 0 0 sky130_fd_pr__pfet_g5v0d10v5 ;W=.42u L=.15u M=1
+
+** system power supply 
+Vdd1 vdd 0 DC 3.3
+
+** transient analysis @NGSPICE 
+.tran 0.01ns 100ns
+.option temp = 27
+.control
+run
+plot v(vref)  v(va)  v(vb)
+.endc
+.end
