@@ -33,10 +33,15 @@ Manoj Sharma
 
 
 Acknowledgments:
-Sheryl Serrao, Mumbai University
-Ankur Sah, NIT Jamshedpur
-Kunal Ghosh, Director, VSD Corp. Pvt. Ltd.
-Philipp Gühring, Software Architect, LibreSilicon Assocation
+
+Sheryl Serrao, Mumbai University;
+
+Ankur Sah, NIT Jamshedpur;
+
+Kunal Ghosh, Director, VSD Corp. Pvt. Ltd.;
+
+Philipp Gühring, Software Architect, LibreSilicon Assocation;
+
 Tim Edwards, Senior Vice President of Analog and Design at efabless corporation
 
 Contact Information
