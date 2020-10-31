@@ -1,0 +1,14 @@
+links to have details of sky130 technology:
+1) https://skywater-pdk--136.org.readthedocs.build/en/136/
+2) https://github.com/google/skywater-pdk
+3) https://foss-eda-tools.googlesource.com/skywater-pdk/libs/sky130_fd_pr.git
+4) https://foss-eda-tools.googlesource.com/skywater-pdk/libs/sky130_fd_pr/+/refs/heads/master/models/
+   git clone https://foss-eda-tools.googlesource.com/skywater-pdk/libs/sky130_fd_pr
+
+How to use sky130 with open source tools and what's inside the sky130, all these are covered in these 2 videos:
+1) https://youtu.be/gRYBdTXbxiU
+2) https://youtu.be/AT_LcmaCZmw
+
+To join sky community on slack:
+https://join.slack.com/t/skywater-pdk/shared_invite/zt-ggcxts4x-4V5AwC950Zv9YgbZ4g~sMQ
+
