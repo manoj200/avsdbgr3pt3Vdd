@@ -2,11 +2,10 @@
 The project is about the implementatation and design of BGR ccircuit
 
 
-About Ngspice
+About Ngspice:
 Ngspice is an open source mixed-signal circuit simulator.
 
-Installing Ngspice
-For Ubuntu
+Installing Ngspice For Ubuntu:
 Open your terminal and type the following to install Ngspice
 
 $  sudo apt-get install -y ngspice
@@ -29,10 +28,13 @@ There are several waveforms that need to be obtained to observe the performance 
 
 
 Contributor:
+===================================
+
 Manoj Sharma
 
 
 Acknowledgments:
+===================================
 
 Sheryl Serrao, Mumbai University;
 Ankur Sah, NIT Jamshedpur;
@@ -41,4 +43,6 @@ Philipp Gühring, Software Architect, LibreSilicon Assocation;
 Tim Edwards, Senior Vice President of Analog and Design at efabless corporation
 
 Contact Information
+===================================
+
 Manoj Sharma, manojs11@gmail.com
